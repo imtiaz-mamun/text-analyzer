@@ -17,10 +17,3 @@
      1. The application shows Word Count, Character Count, Sentence Count, Paragraph Count, and Longest Words from the `sample.txt` file.
      2. Value automatic changes on the front end if the `sample.txt` file's text is updated. Do not require to reload the page to see the updated results.
 
-## Project Structure
-text-analyzer/
-├── app.js
-├── public/
-│   ├── index.html
-│   └── style.css
-└── sample.txt
