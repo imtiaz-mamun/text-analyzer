@@ -1,0 +1,35 @@
+body {
+/*    font-family: Arial, sans-serif;*/
+    font-family: "sans-serif", cursive;
+    background: #fff;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 48px;
+    line-height: 2;
+    font-weight: 100;
+    color: #ddd;
+    background: #88888817;
+    text-shadow: 0px 1px 0px #c0c0c0, 0px 2px 0px #b0b0b0, 0px 3px 0px #a0a0a0, 0px 4px 0px #909090, 0px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+#output {
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+p{
+    font-size: 16px;
+    margin: 15px;
+    letter-spacing: 2px;
+    font-family: Arial, sans-serif;
+}
+p span{
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+}

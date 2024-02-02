@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Text Analyzer</h1>
+    <div id="output">
+    </div>
+    <script>
+        const outputDiv = document.getElementById('output');
+        async function fetchData(endpoint) {
+            const response = await fetch(endpoint);
+            const data = await response.json();
+            return data;
+        }
+        async function displayResults() {
+            const wordCount = await fetchData('/api/words');
+            const charCount = await fetchData('/api/characters');
+            const sentenceCount = await fetchData('/api/sentences');
+            const paragraphCount = await fetchData('/api/paragraphs');
+            const longestWords = await fetchData('/api/longestwords');
+            outputDiv.innerHTML = `
+                <p>Word Count: &nbsp;<span>${wordCount.count}</span></p>
+                <p>Character Count: &nbsp;<span>${charCount.count}</span></p>
+                <p>Sentence Count: &nbsp;<span>${sentenceCount.count}</span></p>
+                <p>Paragraph Count: <span>${paragraphCount.count}</span></p>
+                <p>Longest Words: &nbsp;<span>${longestWords.longestWords.join(', ')}</span></p>
+            `;
+        }
+        displayResults();
+
+        const eventSource = new EventSource('/api/stream');
+        eventSource.onmessage = function(event) {
+            const parameters = JSON.parse(event.data);
+            outputDiv.innerHTML = `
+                <p>Word Count: &nbsp;<span>${parameters.wordCount}</span></p>
+                <p>Character Count: &nbsp;<span>${parameters.characterCount}</span></p>
+                <p>Sentence Count: &nbsp;<span>${parameters.sentenceCount}</span></p>
+                <p>Paragraph Count: &nbsp;<span>${parameters.paragraphCount}</span></p>
+                <p>Longest Words: &nbsp;<span>${parameters.longestWords.join(', ')}</span></p>
+            `;
+        };
+    </script>
+
+</body>
+</html>
