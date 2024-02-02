@@ -1,12 +1,12 @@
 # text-analyzer
 
 ## Project Setup
-1. Clone the repository
-2. Go to the cloned directory by the terminal/console (Ex: cd text-analyzer)
+1. Clone the repository.
+2. Go to the cloned directory by the terminal/console. _(`Example: cd text-analyzer/`)_
 3. Run commands by this order
      1. npm i
      2. node app.js
-4. Now app is running at: http://localhost:3000/
+4. Now app is running at: _http://localhost:3000/_
 
 
 
