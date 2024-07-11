@@ -1,4 +1,4 @@
-### Instructions for Setting Up the Project Locally
+# Instructions for Setting Up the Project Locally
 
 To set up and run the project on your local machine, please follow these steps:
 
@@ -28,7 +28,7 @@ To set up and run the project on your local machine, please follow these steps:
 
    The application will be available at [http://localhost:3000/](http://localhost:3000/)
 
-### SSO Service Integration
+## SSO Service Integration
 
 If you wish to test the SSO (Single Sign-On) integration, please follow these additional steps:
 
@@ -43,13 +43,13 @@ If you wish to test the SSO (Single Sign-On) integration, please follow these ad
 
    The application with SSO will be available at [http://localhost:3000/](http://localhost:3000/)
 
-### Application Features
+## Application Features
 
 - **Input**: `sample.txt`
 - **Output**: The application displays Word Count, Character Count, Sentence Count, Paragraph Count, and Longest Words extracted from `sample.txt`.
 - **Real-time Updates**: The front end automatically updates to reflect changes in `sample.txt` without needing a page reload.
 
-### Testing
+## Testing
 
 To test the solution:
 
@@ -64,6 +64,6 @@ To test the solution:
 
    Test results will be displayed in the terminal.
 
-### Report Analysis
+## Report Analysis
 
 The `report.txt` file in the root directory contains the analysis reports.
